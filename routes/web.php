@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 Route::get('/overview', 'IntroductionController@overview')->name('overview');
 Route::get('/detail', 'IntroductionController@detail')->name('detail');
+
+
+Route::get('/twittersample', 'TwitterController@index');
