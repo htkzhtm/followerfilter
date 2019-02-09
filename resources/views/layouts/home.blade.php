@@ -63,7 +63,7 @@ https://github.com/azouaoui-med/pro-sidebar-template
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a href="#">Overview</a>
+                  <a href="/overview">Overview</a>
                 </li>
                 <li>
                   <a href="#">History</a>
