@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/overview', 'IntroductionController@overview')->name('introduction');
+Route::get('/overview', 'IntroductionController@overview')->name('overview');
+Route::get('/detail', 'IntroductionController@detail')->name('detail');

@@ -57,10 +57,7 @@ https://github.com/azouaoui-med/pro-sidebar-template
                   <a href="/overview">Overview</a>
                 </li>
                 <li>
-                  <a href="#">History</a>
-                </li>
-                <li>
-                  <a href="#">Detail this site</a>
+                  <a href="detail">Detail this site</a>
                 </li>
               </ul>
             </div>

@@ -15,4 +15,14 @@ class IntroductionController extends Controller
     {
         return view('introduction.overview');
     }
+
+    /**
+     * Show the site detail
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function detail()
+    {
+        return view('introduction.detail');
+    }
 }
