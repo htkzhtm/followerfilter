@@ -4,10 +4,14 @@
 <link href="{{ asset('css/introduction/overview.css') }}" rel="stylesheet">
 
 @section('content')
-<div class="panel-body">
+<div class="container container mt-4 mb-5">
+    <h3 class="display-4 text-center"> Author Overview </h3>
+    <hr class="bg-dark mb-4 w-25">
+<div>
+<div class="panel-body" >
     <div class="row">
     <div class=" col-md-9 col-lg-9 "> 
-    <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="pic/pic20190209.png" class="img-circle img-responsive"> </div>
+        <img alt="User Pic" src="pic/pic20190209.png" class="img-circle img-responsive" align="center">
         <table class="table table-user-information">
         <tbody>
             <tr>
