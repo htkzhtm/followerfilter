@@ -13,6 +13,6 @@ class IntroductionController extends Controller
      */
     public function overview()
     {
-        return view('overview');
+        return view('introduction.overview');
     }
 }
