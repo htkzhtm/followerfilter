@@ -66,7 +66,7 @@ https://github.com/azouaoui-med/pro-sidebar-template
             <span>Extra</span>
           </li>
           <li>
-            <a href="twittersample">
+            <a href="twitter">
             <i class="fab fa-twitter"></i>
               <span>Twitter</span>
             </a>
