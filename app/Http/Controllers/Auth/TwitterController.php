@@ -5,6 +5,7 @@ namespace App\Http\Controllers\auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Services\TwitterService;
+use Illuminate\Support\Facades\Input;
 use Socialite;
 
 class TwitterController extends Controller
@@ -16,12 +17,13 @@ class TwitterController extends Controller
         $this->twitter = $twitter;
     }
 
-    public function login(){
+    public function login()
+    {
         return Socialite::driver('twitter')->redirect();
     }
 
-    public function auth(){
-
+    public function auth()
+    {
         $user = Socialite::driver('twitter')->user();
         $this->twitter->oauth($user);
         // Auth::login($user);
