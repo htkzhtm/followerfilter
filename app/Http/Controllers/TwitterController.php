@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class TwitterController extends Controller
 {
     public function index(){
-        return view('twitter.sample');
+        return view('twitter.index');
     }
 }

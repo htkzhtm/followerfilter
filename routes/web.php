@@ -19,7 +19,7 @@ Route::get('/overview', 'IntroductionController@overview')->name('overview');
 Route::get('/detail', 'IntroductionController@detail')->name('detail');
 
 
-Route::get('/twittersample', 'TwitterController@index');
+Route::get('/twitter', 'TwitterController@index');
 
 Route::get('auth/twitter', 'Auth\TwitterController@login');
 Route::get('auth/twitter/callback', 'Auth\TwitterController@auth');
