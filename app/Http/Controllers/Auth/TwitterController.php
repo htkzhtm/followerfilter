@@ -13,8 +13,13 @@ class TwitterController extends Controller
     }
 
     public function auth(){
+
+        $user = Socialite::driver('twitter')->user();
+        echo('<pre>');
+        var_dump($user);
+        echo('<pre>');
         // Auth::login($user);
-        return redirect('/');
+        return redirect('twitter/home');
     }
 
     public function logout()
