@@ -20,6 +20,7 @@ Route::get('/detail', 'IntroductionController@detail')->name('detail');
 
 
 Route::get('/twitter', 'TwitterController@index');
+Route::get('/twitter/home', 'TwitterController@home');
 
 Route::get('auth/twitter', 'Auth\TwitterController@login');
 Route::get('auth/twitter/callback', 'Auth\TwitterController@auth');
