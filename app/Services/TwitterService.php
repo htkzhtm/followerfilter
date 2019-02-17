@@ -32,6 +32,6 @@ class TwitterService {
                 'profile_image_url' => str_replace( "_normal.", "_400x400.", $user->profile_image_url_https)
             ]);
         }
-        // return $followers;
+        return $followers;
     }
 }
