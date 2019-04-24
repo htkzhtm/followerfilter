@@ -25,7 +25,7 @@ class TwitterController extends Controller
     public function auth()
     {
         $user = Socialite::driver('twitter')->user();
-        return view('twitter.followers', ['followers' => $this->twitter->followers($user)]);
+        return view('twitter.followers');
         // Auth::login($user);
         // return redirect('twitter/home');
     }
