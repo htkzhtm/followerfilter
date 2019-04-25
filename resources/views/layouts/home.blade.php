@@ -29,7 +29,7 @@ https://github.com/azouaoui-med/pro-sidebar-template
 </head>
 
 <body>
-<nav class="navbar navbar-dark bg-info fixed-top navbar-expand-lg">
+<nav class="navbar navbar-light fixed-top navbar-expand-lg" style="background-color: #e3f2fd;">
   <a target="_self" href="#top" class="navbar-brand">Follower Manager</a>
   @if(Auth::check())
     <a rel="noopener" target="_self" href="auth/twitter/logout" class="navbar-brand">Logout</a>
