@@ -1,8 +1,8 @@
 <template >
 <div>
     <label for="Followers">Followers</label>
-    <input type="text" class="form-control" id="Followers" v-model="followerNumber" placeholder="Enter number">
-    <div class="row">
+    <input type="text" class="form-control" id="Followers" v-model="followerNumber" placeholder="Enter number">  
+    <transition-group name="fade" class="row" tag="div">
         <div class="col-md-4" v-for="follower in followerFilter" :key="follower.id">
             <div class="card">
                 <img class="card-img-top vuejs" :src="follower.profile_image_url" alt="Card image cap">
@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </transition-group>
 </div>
 </template>
 
@@ -44,5 +44,13 @@
 }
 .col-md-4 {
     margin-bottom: 20px
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0
 }
 </style>
