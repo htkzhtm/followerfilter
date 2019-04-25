@@ -29,14 +29,21 @@ https://github.com/azouaoui-med/pro-sidebar-template
 </head>
 
 <body>
+<nav class="navbar navbar-dark bg-info fixed-top navbar-expand-lg">
+  <a target="_self" href="#top" class="navbar-brand">Follower Manager</a>
+  @if(Auth::check())
+    <a rel="noopener" target="_self" href="auth/twitter/logout" class="navbar-brand">Logout</a>
+  @endif
+</nav>
   <!-- sidebar-wrapper  -->
-  <main class="page-content">
+  <main class="page-content" style="margin-top: 20px;">
     <div class="container-fluid">
       <main class="py-4">
         @yield('content')
       </main>
     </div>
   </main>
+
   <!-- page-content" -->
 
 <!-- page-wrapper -->
