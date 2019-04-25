@@ -11,16 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/overview', 'IntroductionController@overview')->name('overview');
-Route::get('/detail', 'IntroductionController@detail')->name('detail');
-
-
-Route::get('/twitter', 'TwitterController@index');
-Route::get('/twitter/home', 'TwitterController@home');
+Route::get('/', 'TwitterController@index');
+Route::get('/follower', 'TwitterController@list');
 
 Route::get('auth/twitter', 'Auth\TwitterController@login');
 Route::get('auth/twitter/callback', 'Auth\TwitterController@auth');
