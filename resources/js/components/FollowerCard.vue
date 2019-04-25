@@ -1,6 +1,9 @@
 <template >
+<div>
+    <label for="Followers">Followers</label>
+    <input type="text" class="form-control" id="Followers" v-model="followerNumber" placeholder="Enter number">
     <div class="row">
-        <div class="col-md-4" v-for="follower in followers" :key="follower.id">
+        <div class="col-md-4" v-for="follower in followerFilter" :key="follower.id">
             <div class="card">
                 <img class="card-img-top vuejs" :src="follower.profile_image_url" alt="Card image cap">
                 <div class="card-block p-3">
@@ -11,6 +14,7 @@
             </div>
         </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -18,8 +22,24 @@
         props: {
             followers: Array
         },
+        data () {
+            return {
+                followerNumber: 0
+            }
+        },
+        computed: {
+            followerFilter () {
+                return this.followers.filter((follower) => follower.followers_count >= this.followerNumber)
+            },
+        },
         mounted() {
             console.log('Component mounted.')
         }
     }
 </script>
+
+<style>
+#Followers {
+    margin-bottom: 20px;
+}
+</style>
