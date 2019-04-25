@@ -16,14 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'twitter_id',
-        'name',
-        'screen_name',
-        'description',
-        'profile_image_url',
-        'followers_count',
-        'friends_count',
-        'statuses_count',
+        'twitter_id'
     ];
 
     public function followers()

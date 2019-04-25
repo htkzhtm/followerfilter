@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Services\TwitterService;
 use Illuminate\Support\Facades\Input;
+use Auth;
 use Socialite;
+use App\User;
+use App\Follower;
 
 class TwitterController extends Controller
 {
@@ -25,15 +28,26 @@ class TwitterController extends Controller
     public function auth()
     {
         $user = Socialite::driver('twitter')->user();
+
+        $account = User::where('twitter_id', $user->id)->first();
+
+        if (!$account) {
+            $account = User::create([
+                'twitter_id' => $user->id
+            ]);
+        }
+        Auth::login($account);
+
         $followers = $this->twitter->followers($user);
-        return view('twitter.followers', ['followers' => json_encode($followers)]);
-        // Auth::login($user);
-        // return redirect('twitter/home');
+        
+        Follower::insert($followers);
+
+        return redirect('/follower');
     }
 
     public function logout()
     {
-        // Auth::logout();
+        Auth::logout();
         return redirect('/');
     }
 }

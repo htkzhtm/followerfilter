@@ -42,4 +42,7 @@
 #Followers {
     margin-bottom: 20px;
 }
+.col-md-4 {
+    margin-bottom: 20px
+}
 </style>

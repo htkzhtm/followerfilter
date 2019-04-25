@@ -23,9 +23,11 @@ class TwitterService {
         $users = get_object_vars($twitter->get('followers/list')) ["users"];
 
         $followers = [];
+        $id = $user->id;
         foreach ($users as $user) {
             array_push($followers, [
-                'id' => $user->id,
+                'twitter_id' => $user->id,
+                'users_twitter_id' => $id,
                 'name' => $user->name,
                 'screen_name' => $user->screen_name,
                 'description' => $user->description,
