@@ -10,7 +10,7 @@ class TwitterController extends Controller
         return view('twitter.index');
     }
 
-    public function home(){
-        return view('twitter.home');
+    public function list(){
+        return view('twitter.followers');
     }
 }
