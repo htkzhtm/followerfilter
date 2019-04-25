@@ -2,14 +2,10 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class Follower extends Model
 {
-    use Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -26,8 +22,8 @@ class User extends Authenticatable
         'statuses_count',
     ];
 
-    public function followers()
+    public function users()
     {
-        return $this->hasMany('App\Follower');
+        return $this->belongsTo('App\User');
     }
 }
