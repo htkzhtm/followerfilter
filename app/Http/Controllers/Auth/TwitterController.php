@@ -38,8 +38,11 @@ class TwitterController extends Controller
         }
         Auth::login($account);
 
-        $followers = $this->twitter->followers($user);
         
+        $followers = $this->twitter->followers($user);
+
+        // とりあえず今は許す（動かしたいので）
+        Follower::where('users_twitter_id', Auth::user()->twitter_id)->delete();
         Follower::insert($followers);
 
         return redirect('/follower');
