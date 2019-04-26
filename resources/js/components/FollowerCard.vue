@@ -8,8 +8,11 @@
                 <img class="card-img-top vuejs" :src="follower.profile_image_url" alt="Card image cap">
                 <div class="card-block p-3">
                     <h4 class="card-title"><i class="fab fa-twitter"></i> {{ follower.name }}</h4>
-                    <h6 class="card-subtitle mb-2"><span class="text-muted nickname">{{ follower.screen_name }}</span></h6>
+                    <h6 class="card-subtitle mb-2"><span class="text-muted nickname">@{{ follower.screen_name }}</span></h6>
                     <p class="card-text">{{ follower.description }}</p>
+                    <h5 class="card-title"><i class="fab fa-twitter-square"></i>Tweets {{ follower.statuses_count }}</h5>
+                    <h5 class="card-title"><i class="fas fa-user"></i>Follow {{ follower.friends_count }}</h5>
+                    <h5 class="card-title"><i class="fas fa-users"></i>Followers {{ follower.followers_count }}</h5>
                 </div>
             </div>
         </div>
