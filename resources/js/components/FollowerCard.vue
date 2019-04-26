@@ -43,14 +43,24 @@
     margin-bottom: 20px;
 }
 .col-md-4 {
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
-.fade-enter-active, .fade-leave-active {
-    transition: opacity .5s
+.fade-enter-active {
+    transition: opacity .5s;
+}
+
+.fade-leave-active {
+    transition: opacity .5s;
+    position: absolute;
 }
 
 .fade-enter, .fade-leave-to {
   opacity: 0
+}
+
+.fade-move {
+  transition: transform 1s;
 }
 </style>
